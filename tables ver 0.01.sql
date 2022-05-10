@@ -18,7 +18,7 @@ CREATE TABLE academy(
     aName VARCHAR(10) NOT NULL,
     phone VARCHAR(13) NOT NULL,
     email VARCHAR(25) NOT NULL,
-    companyNum VARCHAR(12) NOT NULL,
+    companyNum VARCHAR(15) NOT NULL, //크기 12에서 15로 변경 했음
     address VARCHAR(25) NOT NULL,
     location VARCHAR(50) NOT NULL,
     grade int(10) default 1200,
