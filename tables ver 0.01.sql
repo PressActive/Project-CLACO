@@ -1,14 +1,15 @@
 drop table member, academy, admin, freeboard, review, class, report, filter, imagefile;
 
-CREATE TABLE member(
-	mIndex INT(5) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    id VARCHAR(10) NOT NULL,
-    pwd VARCHAR(10) NOT NULL,
-    mName VARCHAR(10) NOT NULL,
-    phone VARCHAR(13) NOT NULL,
-    email VARCHAR(25) NOT NULL,
-	joinDate DATETIME default NOW(),     # == joinDate DATETIME default current_timestamp
-    bookMark INT(5)
+CREATE TABLE member(						// 일반회원(USER),기업회원(COMPANY)으로 구분 (스프링시큐리티에서 자체 구분)
+	mIndex INT(5) NOT NULL PRIMARY KEY AUTO_INCREMENT,	// 회원 번호 (기본키)
+    id varchar(20) NOT NULL,					// 아이디
+    pwd varchar(100) NOT NULL,					// 비밀번호
+    mName varchar(20) NOT NULL,					// 이름	
+    phone varchar(20) NOT NULL,					// 전화번호
+    email varchar(30) NOT NULL,					// 이메일
+    companyNum varchar(20),					// 사업자번호(기업)
+    address varchar(50),					// 주소(기업)
+    joinDate DATETIME default NOW()				// 가입일(기본값)
 );
 
 CREATE TABLE academy(
