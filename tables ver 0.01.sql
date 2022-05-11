@@ -10,6 +10,7 @@ CREATE TABLE member(						// 일반회원(USER),기업회원(COMPANY)으로 구�
     companyNum varchar(20),					// 사업자번호(기업)
     address varchar(50),					// 주소(기업)
     joinDate DATETIME default NOW()				// 가입일(기본값)
+    role varchar(20) 						// 권한(일반,기업,관리자)			    
 );
 
 CREATE TABLE academy(
