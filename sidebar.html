@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #wrap{
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+    .sidebar{
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 200px;
+        height: 600px;
+        border: 2px solid #a1d4e3;
+        /* border: 1px solid black; */
+    }
+    h3{
+        font-size: 25px;
+        padding-top: 10px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background-color: #a1d4e3;
+    }
+    .service{
+        text-decoration: none;
+        padding-left: 20px;
+    }
+   
+    .my_info_list{
+        padding-left: 20px;
+        list-style: none;
+    }
+    .my_info_list> .my_info_1>li{
+        padding-top: 5px;
+    }
+    .my_info_list> .my_info_2>li{
+        padding-top: 5px;
+    }
+    .my_info_list> .my_info_3>li{
+        padding-top: 5px;
+    }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="sidebar">
+            <h3 class="my_top">
+                <img src="img/mypage.png" alt="mypage">
+                MY PAGE
+            </h3>
+            
+            <div id="my_info_container">
+                <ul class="my_info">
+                    <br>
+                    <il class="my_info_list">MY INFO 1
+                        <ul class="my_info_1 my_info_list">
+                            <li>info</li>
+                            <li>info</li>
+                            <li>info</li>
+                            <li>info</li>
+                        </ul>
+                    </il>
+                    <br>
+                    <il class="my_info_list">MY INFO 2
+                        <ul class="my_info_2 my_info_list">
+                            <li>info</li>
+                            <li>info</li>
+                            <li>info</li>
+                            <li>info</li>
+                        </ul>
+                    </il>
+                    <br>
+                    <il class="my_info_list">MY INFO 3
+                        <ul class="my_info_3 my_info_list">
+                            <li>info</li>
+                            <li>info</li>
+                            <li>info</li>
+                            <li>info</li>
+                        </ul>
+                    </il>
+                </ul>
+                <br>
+                <hr>
+                <br>
+                <a class="service" href="#">Service</a>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
