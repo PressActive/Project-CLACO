@@ -1,0 +1,86 @@
+body {
+	text-align:center;	
+	margin-top: 230px;
+}
+
+#css_tabs input : nth-of-type(1), #css_tabs input : nth-of-type(1) ~ div:nth-of-type(1),  
+#css_tabs input : nth-of-type(2), #css_tabs input : nth-of-type(2) ~ div:nth-of-type(2){
+	display:none  
+}
+#css_tabs input:nth-of-type(1):checked ~ div:nth-of-type(1),  
+#css_tabs input:nth-of-type(2):checked ~ div:nth-of-type(2){
+	display:none
+}
+ 
+ 
+/*기업회원 로그인 스타일 적용*/
+#input1 #input2 {
+	width: 180px; 
+	height:30px;
+}
+#input3 {
+	width: 180px; 
+	height:30px;
+	margin-top: 5%; 
+}
+
+/*개인회원 로그인 스타일 적용*/
+#input4 #input5 {
+	width: 180px; 
+	height:30px;
+}
+#input6 {
+	width: 180px; 
+	height:30px;
+	margin-top: 5%; 
+}
+
+
+/* 기본 라벨 스타일 지정 */
+#css_tabs > label {
+    display: inline-block;  
+    font-size: 15px;  
+    padding: 10px; 
+    text-align: center; 
+    width: 15%; 
+    line-height: 20px; 
+    font-weight: bold;  
+    border-radius: 5px; 
+    background: #eee;
+    color: #777;  
+    border: 1px solid #ccc;  
+    border-width: 1px 1px 0  
+}
+
+#css_tabs > label:hover {
+    cursor: pointer  /*마우스가 올라갔을때 커서 모양 (포인터) 지정*/
+}
+
+#css_tabs label[for=tab1] {
+    margin-left: 1.5em  
+}
+
+
+/* 선택 및 커서 올린 라벨 스타일 지정 */
+#css_tabs input:nth-of-type(1):checked ~ label:nth-of-type(1), #css_tabs > label[for=tab1]:hover {
+	background: white;  
+	color:#000000 
+}
+
+#css_tabs input:nth-of-type(2):checked ~ label:nth-of-type(2), #css_tabs > label[for=tab2]:hover {
+	background: white;  
+	color:#000000  
+}
+
+
+/* 로그인 칸 <div> 스타일 지정 */
+#css_tabs .tab1_content, #css_tabs .tab2_content {
+	padding: 55px;  /*테두리와 컨텐츠 사이에 있는 여백*/
+	border: 2px solid #ddd;  /*테두리 (굶기는 2px, 선 색깔 밝은 회색*/
+
+	/* 너비 (max-width 값을 줘서 화면의 좌우 크기가 특정 width를 넘어가더라도 더 이상 커지지 않도록 설정한다. 좌우의 margin 값을 auto로 두면 여유 공간이 생겼을 때 좌우 margin이 동일하게 늘어난다. 결과적으로 가운데 정렬이 된다. )*/
+	max-width: 800px;
+	margin: 0 auto; 
+ 
+	height:100%  /*높이*/
+}

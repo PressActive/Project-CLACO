@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" 
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시글 수정</title>
+    <style>
+        
+    </style>
+    <script>
+        
+    </script>
+</head>
+<body>
+	<!-- layout -->
+    <div layout:fragment="content">
+	    <form th:action="@{'/freeboard/post/edit/' + ${boardDto.bindex}}" method="post">
+	        <input type="hidden" name="_method" value="put" />
+	        <input type="hidden" name="bindex" th:value="${boardDto.bindex}" />
+	        <input type="hidden" name="count" th:value="${boardDto.count}" />
+			<input type="hidden" name="writer" th:value="${boardDto.writer}">
+			
+	        제목 : <input type="text" name="title" th:value="${boardDto.title}"> <br>
+	        
+	        <textarea name="contents" th:text="${boardDto.contents}"></textarea> <br>
+	        
+	        <input type="submit" value="수정">
+	        <a th:href="@{/freeboard}"><button>취소</button></a>
+	    </form>
+	<!-- layout end-->
+	</div>
+</body>
+</html>

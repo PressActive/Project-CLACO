@@ -1,0 +1,55 @@
+plugins {
+	id 'org.springframework.boot' version '2.6.7'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'Academyinfo'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'mysql:mysql-connector-java'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-thymeleaf
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	
+	// https://mvnrepository.com/artifact/org.hibernate/hibernate-core
+	// implementation group: 'org.hibernate', name: 'hibernate-core', version: '6.0.1.Final', ext: 'pom'
+	// https://mvnrepository.com/artifact/org.hibernate/hibernate-core
+	implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.6.8.Final'
+    // https://mvnrepository.com/artifact/org.hibernate/hibernate-core
+	// implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.6.5.Final'
+	// https://mvnrepository.com/artifact/org.hibernate.common/hibernate-commons-annotations
+	// implementation group: 'org.hibernate.common', name: 'hibernate-commons-annotations', version: '6.0.1.Final'
+	// https://mvnrepository.com/artifact/org.hibernate.common/hibernate-commons-annotations
+	implementation group: 'org.hibernate.common', name: 'hibernate-commons-annotations', version: '5.1.2.Final'
+	
+	// thymeleaf layout
+	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:3.1.0'
+	
+	// security
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
+	testImplementation 'org.springframework.security:spring-security-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

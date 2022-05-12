@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" 
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>새 글 쓰기</title>
+    <style>
+        
+    </style>
+    <script>
+        
+    </script>
+</head>
+<body>
+	<!-- layout -->
+    <div layout:fragment="content">
+	    <form action="/freeboard/post" method="post">
+	    	<!-- <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> -->
+	        제목 : <input type="text" name="title"> <br>
+	        <input type="hidden" name="writer" th:value="${id}"> <br>
+	        <textarea name="contents"></textarea> <br>
+	
+	        <input type="submit" value="등록">
+	        <a th:href="@{/freeboard}"><button>취소</button></a>
+	    </form>    
+    <!-- layout end-->
+	</div>
+</body>
+</html>
