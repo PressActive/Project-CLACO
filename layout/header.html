@@ -5,19 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>header</title>
-    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="css/header.css">
+    
 </head>
 <body>
     <header>
         <nav>
             <a id="logo" href="#"><img src="img/logo_img_color2.png" alt="logo"></a>
             <ul id="nav_menu">
-                <li class="nav_li"><a class="nav_a" href="#"><img class="nav_img" src="img/user-free-icon-font.png" alt="icon"> Login</a></li>
-                <li class="nav_li"><a class="nav_a" href="#"><img class="nav_img" src="img/user-free-icon-font (1).png" alt=""> Sign Up</a></li>
-                <li class="nav_li"><a class="nav_a" href="#"><img class="nav_img" src="img/interrogation-free-icon-font.png" alt=""> Service</a></li>
+                <li class="nav_li"><a class="nav_a" href="#"><img class="nav_img" src="img/login-color3.png" alt="icon"> Login</a></li>
+                <li class="nav_li"><a class="nav_a" href="#"><img class="nav_img" src="img/signup-color3.png" alt=""> Sign Up</a></li>
+                <li class="nav_li"><a class="nav_a" href="#"><img class="nav_img" src="img/service-color3.png" alt=""> Service</a></li>
             </ul>
-            <button type="button" id="menu_btn"class="on"><img id="menubar" src="img/menubar.png" alt="bar"></button>
-            <div id="dropdown">
+
+            <div class="nav_search">
+                <form class="nav_search_bar">
+                    <button class="nav_search_filter" type="submit"><img src="img/down32.png" alt="down"></button>
+                    <input class="nav_search_text" type="search" placeholder="검색어를 입력해주세요" aria-label="Search">
+                    <button class="nav_search_btn" type="submit"><img src="img/search24.png" alt="search"></button>
+                  </form>
+            </div>
+
+            <button type="button" id="menu_btn"><img id="menubar" src="img/menubar.png" alt="bar"></button>
+            <div id="dropdown" class="open">
                 <ul>
                     <li class="drop_li"><a href="#" class="dropdown_item">Login</a></li>
                     <li class="drop_li"><a href="#" class="dropdown_item">Sign UP</a></li>
@@ -26,5 +36,14 @@
             </div>    
         </nav>
     </header>
+
+    <script>
+        var menu_btn = document.getElementById('menu_btn');
+        var dropdown = document.getElementById('dropdown');
+        
+        menu_btn.addEventListener('click', function(){
+            dropdown.classList.toggle('open');
+        });
+    </script>
 </body>
 </html>
