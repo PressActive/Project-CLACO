@@ -1,0 +1,36 @@
+academy <> image (1:N 조인 필요)
+image.index name / academy.index
+
+class <> image (1:N 조인 필요)
+image.index / class.index
+
+-------------------------------------------------    완료    ------------------------------------------
+<Fetch TYPE는 LAZY로, Service에서 @Transactional 이용하자.
+
+
+member <(1:N)> member_class <(N:1)> class 조인(양방향 N:M 조인 중)
+list<class> / list<member>
+
+member <> review(양방향 1:N 조인 중)
+list<review> / id
+
+member <> academy(양방향 1:N 조인 중 / member 삭제 시 academy 삭제)
+list<academy> / member.index
+
+member <> alertboard(양방향 1:N 조인 중)
+list<alertboard> / member.id
+
+member <> freeboard(양방향 1:N 조인 중)
+list<freeboard> / member.id
+
+member <> comment(양방향 1:N 조인 중)
+list<comment> / member.id
+
+freeboard <> comment(양방향 1:N 조인 중)
+list<comment> / alertboard.index
+
+academy <> class (양방향 1:N 조인 중)
+list<class> / academy.name, location, grade
+
+class <> review(양방향 1:N 조인 중)
+list<review> / cindex, cname, cscore 등?
