@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+    <title>header-2</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="header(4).css">
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <nav>
+                <div id="nav_logo">
+                    <a href="#" id="logo"><img src="img/logo_img_color2.png" alt="logo"></a>
+                </div>
+                <div id="nav_menu">
+                    <ul>
+                        <li class="nav_menu_li"><a class="nav_menu_a" href="#"><img src="img/login-color3.png" alt="icon"> Login</a></li>
+                        <li class="nav_menu_li"><a class="nav_menu_a" href="#"><img src="img/signup-color3.png" alt="icon"> Sign Up</a></li>
+                        <li class="nav_menu_li"><a class="nav_menu_a" href="#"><img src="img/service-color3.png" alt="icon"> Service</a></li>
+                    </ul>
+                </div>
+                <div id="nav_search">
+                    <form action="" method="get">
+                        <button type="button" id="nav_search_detail_btn" class="nav_search_menu"><img src="img/down32.png" alt="filter"></button>
+                        <input class="nav_search_text" name="keyword" type="search" placeholder="검색어 입력" aria-label="Search">
+                        <input name ="arr_location_S" type ="hidden" > <!-- 서울에서 선택된 지역 배열 데이터 보내기 -->
+                    	<input name ="arr_location_B" type ="hidden" >
+                        <button class="nav_search_btn" id="nav_search_btn" onclick="fnGetdata();"><img src="img/search24.png" alt="search"></button>
+                    </form>
+                </div>
+                <div id="nav_search_detail" class="open">
+                    <div class="local">
+                        <ul class="local_list">
+                            <li><button class="local_list_btn" onclick="local_Seoul()">서울</button></li>
+                            <li><button class="local_list_btn" onclick="local_Busan()">부산</button></li>
+                            <li><button class="local_list_btn" onclick="local_Daegu()">대구</button></li>
+                            <li><button class="local_list_btn" onclick="local_Incheon()">인천</button></li>
+                            <li><button class="local_list_btn" onclick="local_Gwangju()">광주</button></li>
+                            <li><button class="local_list_btn" onclick="local_Daejeon()">대전</button></li>
+                            <li><button class="local_list_btn" onclick="local_Ulsan()">울산</button></li>
+                            <li><button class="local_list_btn" onclick="local_Sejong()">세종</button></li>
+                            <li><button class="local_list_btn" onclick="local_Gyeonggi()">경기</button></li>
+                            <li><button class="local_list_btn" onclick="local_Gangwon()">강원</button></li>
+                            <li><button class="local_list_btn" onclick="local_Chungbuk()">충북</button></li>
+                            <li><button class="local_list_btn" onclick="local_Chungnam()">충남</button></li>
+                            <li><button class="local_list_btn" onclick="local_Jeonbuk()">전북</button></li>
+                            <li><button class="local_list_btn" onclick="local_Jeonnam()">전남</button></li>
+                            <li><button class="local_list_btn" onclick="local_Gyeonbuk()">경북</button></li>
+                            <li><button class="local_list_btn" onclick="local_Gyeonnam()">경남</button></li>
+                            <li><button class="local_list_btn" onclick="local_Jeju()">제주</button></li>
+                        </ul>
+                    </div>
+                    <div class="local_area_list">
+                        <div id="btn_Seoul" class="list checkbox_group">
+                            <input type="checkbox" value="전체" name="checkbox_seoul_all" id="seoul_all" onclick="selectAll_Seoul(this)"/><label for="seoul_all">전체</label>
+                            <input class = "checkbox_seoul" type="checkbox" name="checkbox_seoul" id="10101" value="종로구" onclick = "checkSelectAll_S(this)"/> <label for="10101">종로구</label>
+            	    	    <input class = "checkbox_seoul" type="checkbox" name="checkbox_seoul" id="10102" value="중구" onclick = "checkSelectAll_S(this)"/> <label for="10102">중구</label>
+            	    	    <input class = "checkbox_seoul" type="checkbox" name="checkbox_seoul" id="10103" value="용산구" onclick = "checkSelectAll_S(this)"/> <label for="10103">용산구</label>
+            	    	    <input class = "checkbox_seoul" type="checkbox" name="checkbox_seoul" id="10104" value="성동구" onclick = "checkSelectAll_S(this)"/> <label for="1014">성동구</label>
+            	    	    <input class = "checkbox_seoul" type="checkbox" name="checkbox_seoul" id="10105" value="광진구" onclick = "checkSelectAll_S(this)"/> <label for="10105">광진구</label>
+            	    	    <input class = "checkbox_seoul" type="checkbox" name="checkbox_seoul" id="10106" value="동대문구" onclick = "checkSelectAll_S(this)"/> <label for="10106">동대문구</label>
+            	    	    <input class = "checkbox_seoul" type="checkbox" name="checkbox_seoul" id="10107" value="중랑구" onclick = "checkSelectAll_S(this)"/> <label for="10107">중랑구</label>
+            	    	    <input class = "checkbox_seoul" type="checkbox" name="checkbox_seoul" id="10108" value="성북구" onclick = "checkSelectAll_S(this)"/> <label for="10108">성북구</label>
+            	    	    <input class = "checkbox_seoul" type="checkbox" name="checkbox_seoul" id="10109" value="강북구" onclick = "checkSelectAll_S(this)"/> <label for="10109">강북구</label>
+            	    	    <input class = "checkbox_seoul" type="checkbox" name="checkbox_seoul" id="10110" value="도봉구" onclick = "checkSelectAll_S(this)"/> <label for="10110">도봉구</label>
+            	    	    <input class = "checkbox_seoul" type="checkbox" name="checkbox_seoul" id="10111" value="노원구" onclick = "checkSelectAll_S(this)"/> <label for="10111">노원구</label>
+            	    	    <input class = "checkbox_seoul" type="checkbox" name="checkbox_seoul" id="10112" value="은평구" onclick = "checkSelectAll_S(this)"/> <label for="10112">은평구</label>
+            	    	    <input class = "checkbox_seoul" type="checkbox" name="checkbox_seoul" id="10113" value="서대문구" onclick = "checkSelectAll_S(this)"/> <label for="10113">서대문구</label>
+            	    	    <input class = "checkbox_seoul" type="checkbox" name="checkbox_seoul" id="10114" value="마포구" onclick = "checkSelectAll_S(this)"/> <label for="10114">마포구</label>
+            	    	    <input class = "checkbox_seoul" type="checkbox" name="checkbox_seoul" id="10115" value="양천구" onclick = "checkSelectAll_S(this)"/> <label for="10115">양천구</label>
+            	    	    <input class = "checkbox_seoul" type="checkbox" name="checkbox_seoul" id="10116" value="강서구" onclick = "checkSelectAll_S(this)"/> <label for="10116">강서구</label>
+            	    	    <input class = "checkbox_seoul" type="checkbox" name="checkbox_seoul" id="10117" value="구로구" onclick = "checkSelectAll_S(this)"/> <label for="10117">구로구</label>
+            	    	    <input class = "checkbox_seoul" type="checkbox" name="checkbox_seoul" id="10118" value="금천구" onclick = "checkSelectAll_S(this)"/> <label for="10118">금천구</label>
+            	    	    <input class = "checkbox_seoul" type="checkbox" name="checkbox_seoul" id="10119" value="영등포구" onclick = "checkSelectAll_S(this)"/> <label for="10119">영등포구</label>
+            	    	    <input class = "checkbox_seoul" type="checkbox" name="checkbox_seoul" id="10120" value="동작구" onclick = "checkSelectAll_S(this)"/> <label for="10120">동작구</label>
+            	    	    <input class = "checkbox_seoul" type="checkbox" name="checkbox_seoul" id="10121" value="관악구" onclick = "checkSelectAll_S(this)"/> <label for="10121">관악구</label>
+            	    	    <input class = "checkbox_seoul" type="checkbox" name="checkbox_seoul" id="10122" value="서초구" onclick = "checkSelectAll_S(this)"/> <label for="10122">서초구</label>
+            	    	    <input class = "checkbox_seoul" type="checkbox" name="checkbox_seoul" id="10123" value="강남구" onclick = "checkSelectAll_S(this)"/> <label for="10123">강남구</label>
+            	    	    <input class = "checkbox_seoul" type="checkbox" name="checkbox_seoul" id="10124" value="송파구" onclick = "checkSelectAll_S(this)"/> <label for="10124">송파구</label>
+            	    	    <input class = "checkbox_seoul" type="checkbox" name="checkbox_seoul" id="10125" value="강동구" onclick = "checkSelectAll_S(this)"/> <label for="10125">강동구</label>
+            		        <input type="hidden" name="hiddenValue_S" id="hiddenValue_S" value=""/>
+                        </div>
+                        <div id="btn_Busan" class="list checkbox_group">
+                            <input type="checkbox" value="전체" name="checkbox_busan_all" id="busan_all" onclick="selectAll_Busan(this)"/><label for="busan_all">전체</label>
+                            <input class = "checkbox_busan" type="checkbox" name="checkbox_busan" id="checkbox_busan2" value="사상구" onclick = "checkSelectAll_B(this)"/> <label for="checkbox_busan2">사상구</label>
+            	    	    <input class = "checkbox_busan" type="checkbox" name="checkbox_busan" id="checkbox_busan3" value="사하구" onclick = "checkSelectAll_B(this)"/> <label for="checkbox_busan3">사하구</label>
+            		        <input type="hidden" name="hiddenValue_S" id="hiddenValue_S" value=""/>
+                        </div>
+                    </div>
+                    
+                </div>    
+                <button type="button" id="nav_drop_btn"><img src="img/menubar.png" alt="btn"></button>
+                <div id="nav_drop_menu" class="open">
+                    <ul>
+                        <li class="nav_drop_li"><a class="nav_drop_a" href="#"><img src="img/login-color3.png" alt="icon"> Login</a></li>
+                        <li class="nav_drop_li"><a class="nav_drop_a" href="#"><img src="img/signup-color3.png" alt="icon"> Sign Up</a></li>
+                        <li class="nav_drop_li"><a class="nav_drop_a" href="#"><img src="img/service-color3.png" alt="icon"> Service</a></li>
+                    </ul>
+                </div>           
+            </nav>
+        </header>
+    </div>
+    <script src="header(4).js"></script>
+       
+</body>
+</html>

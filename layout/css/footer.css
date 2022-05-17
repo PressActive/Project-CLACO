@@ -26,8 +26,18 @@ footer{
     background-color: #a1d4e3;
 }
 .footer_logo{
+    width: 200px;
     position: absolute;
     left: 30px;
     height: 150px;
     line-height: 150px;
+}
+.copy{
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    line-height: 150px;
+    z-index: 3;
+    left: 50%;
+    bottom: 10px;
 }

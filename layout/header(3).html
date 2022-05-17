@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header-2</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        header{
+            width: 100%;
+            height: 70px;
+            position: fixed;
+            background-color: #b3eafb;
+            clear: both;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        /* logo start */
+        #nav_logo{
+            float: left;
+            width: 300px;
+            line-height: 70px;
+            height: 70px;
+        }
+        #nav_logo >#logo > img {
+            vertical-align: middle;
+            transform: translate(25px,0);
+        }
+        /* logo end */
+        /* navbar start*/
+        #nav_menu{
+            float: right;
+            width: 370px;
+        }
+        #nav_menu > ul:nth-child(1) > li{
+            float: left;
+        }
+        .nav_menu_li{
+            line-height: 70px;
+        }
+        .nav_menu_li > a {
+            font-size: 20px;
+            color:  #316271;
+            padding-right: 20px;
+        }
+        .nav_menu_li > a {
+            line-height: 70px;
+            vertical-align: middle;
+        }
+        /* navbar end */
+        /* nav search :start */
+        #nav_search{
+            position: absolute;
+            left: 38%;
+            height: 50px;
+            width: 400px;
+            top: 10px;
+            border: 2px solid #316271;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        .nav_search_menu{
+            float: left;
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            outline: 0;
+            border: 0;
+        }
+        .nav_search_text{
+            float: left;
+            width: 300px;
+            height: 50px;
+            outline: 0;
+            border: 0;
+            font-size: 20px;
+        }
+        .nav_search_btn{
+            float: right;
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            outline: 0;
+            border: 0;
+        }
+        /* nav search :end */
+        /* nav search detail:start */
+        #nav_search_detail{
+            box-sizing: border-box;
+            padding: 30px;
+           width: 100%;
+           height: 400px;
+           position: absolute;
+           top: 70px;
+           background-color: #b3eafb;  
+       }
+       .local{
+           display: inline-block;
+           top: 20px;
+           width: 95%;
+           height: 150px;
+           border-bottom:2px dotted #316271;
+       }
+       .local_list > li{
+           display: inline-block;
+           width: 100px;
+           height: 50px;
+       }
+       .local_list_btn:hover{
+           background-color: #316271;
+           color: white;
+       }
+       .local_list_btn{
+           font-size: 20px;
+           width: 100px;
+           height: 50px;
+           border: 0;
+           outline: 0;
+           background-color: #b3eafb;
+           cursor: pointer;
+       }
+       input[type="checkbox"]{
+            display: none;
+       }
+       input[type="checkbox"] + label{
+           text-align: center;
+           line-height: 40px;
+           display: inline-block;
+           width: 70px;
+           height: 40px;
+           cursor: pointer;
+           background-color: #b3eafb;
+           margin-top: 3px;
+           margin-bottom: 3px;
+           
+       }
+       input[type="checkbox"]:checked +label{
+           background-color: #316271;
+           color: white;
+       }
+        /* nav search detail:end */
+        /* nav dropdown menu start */
+        #nav_drop_btn{
+            display: none;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            padding: 2px;
+            background-color: #b3eafb;
+            border: 0;
+            outline: 0;
+        }
+        .open{
+            display: none;
+        }
+        #nav_drop_menu{
+            position: absolute;
+            top: 70px;
+            width: 100%;
+            height: 150px;
+            background-color: #b3eafb;
+        }
+        .nav_drop_li{
+            text-align: center;
+        }
+        
+        .nav_drop_li:hover{
+            background-color: #ffffff;
+        }
+        .nav_drop_a{
+            line-height: 47px;
+            display: inline-block;
+            width: 100%;
+            height: 47px;
+            font-size: 20px;
+            color: #316271;
+            text-decoration: none;
+            padding-right: 20px;
+        }
+        /* nav dropdown menu end */
+        
+        /* media :start */
+        @media screen and (min-width: 1300px){
+            #nav_drop_menu{
+                display: none;
+            } 
+        }
+        @media screen and (max-width: 1299px){
+            #nav_menu{
+                display: none;
+            }
+             
+            #nav_drop_btn{
+               display: inline-block;
+            }
+            #nav_drop_btn:hover{
+                cursor: pointer;
+            }
+
+        }
+        @media screen and (max-width: 770px) {
+            #nav_drop_btn{
+               display: none;
+            }
+            #nav_drop_menu{
+                display: block;
+                height: 50px;
+                text-align: center;
+            }
+            .nav_drop_li{
+                display: inline-block;
+            }
+            .nav_drop_li:hover{
+                background-color: #b3eafb;
+            }
+            #nav_search{
+                width: 250px;
+            }
+            .nav_search_menu{               
+                width: 50px;
+                height: 50px;                
+            }
+            .nav_search_text{               
+                width: 150px;
+                height: 50px;               
+                font-size: 16px;
+            }
+            .nav_search_btn{               
+                width: 50px;
+                height: 50px;               
+            }
+            #nav_search_detail{
+                top: 120px;
+            }
+        }
+        /* media :end */
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <nav>
+                <div id="nav_logo">
+                    <a href="#" id="logo"><img src="img/logo_img_color2.png" alt="logo"></a>
+                </div>
+                <div id="nav_menu">
+                    <ul>
+                        <li class="nav_menu_li"><a class="nav_menu_a" href="#"><img src="img/login-color3.png" alt="icon"> Login</a></li>
+                        <li class="nav_menu_li"><a class="nav_menu_a" href="#"><img src="img/signup-color3.png" alt="icon"> Sign Up</a></li>
+                        <li class="nav_menu_li"><a class="nav_menu_a" href="#"><img src="img/service-color3.png" alt="icon"> Service</a></li>
+                    </ul>
+                </div>
+                <div id="nav_search">
+                    <form action="" method="get">
+                        <button type="button" id="nav_search_detail_btn" class="nav_search_menu"><img src="img/down32.png" alt="filter"></button>
+                        <input class="nav_search_text" type="search" placeholder="검색어 입력" aria-label="Search">
+                        <button class="nav_search_btn" type="submit"><img src="img/search24.png" alt="search"></button>
+                    </form>
+                </div>
+                <div id="nav_search_detail" class="open">
+                    <div class="local">
+                        <ul class="local_list">
+                            <li><button class="local_list_btn" onclick="local_Seoul()">서울</button></li>
+                            <li><button class="local_list_btn" onclick="local_Busan()">부산</button></li>
+                        </ul>
+                    </div>
+                    <div class="local_area_list">
+                        <div id="btn_Seoul" class="list checkbox_group">
+                            <input type="checkbox" value="전체" name="checkbox_seoul_all" id="seoul_all" onclick="selectAll_Seoul(this)"/><label for="seoul_all">전체</label>
+                            <input class = "checkbox_seoul local_checkbox" type="checkbox" name="checkbox_seoul" id="checkbox_seoul2" value="강남구" onclick = "checkSelectAll_S(this)"/> <label for="checkbox_seoul2">강남구</label>
+            	    	    <input class = "checkbox_seoul local_checkbox" type="checkbox" name="checkbox_seoul" id="checkbox_seoul3" value="강서구" onclick = "checkSelectAll_S(this)"/> <label for="checkbox_seoul3">강서구</label>
+            		        <input type="hidden" name="hiddenValue_S" id="hiddenValue_S" value=""/>
+                        </div>
+                        <div id="btn_Busan" class="list checkbox_group">
+                            <input type="checkbox" value="전체" name="checkbox_busan_all" id="busan_all" onclick="selectAll_Busan(this)"/><label for="busan_all">전체</label>
+                            <input class = "checkbox_busan local_checkbox" type="checkbox" name="checkbox_busan" id="checkbox_busan2" value="사상구" onclick = "checkSelectAll_B(this)"/> <label for="checkbox_busan2">사상구</label>
+            	    	    <input class = "checkbox_busan local_checkbox" type="checkbox" name="checkbox_busan" id="checkbox_busan3" value="사하구" onclick = "checkSelectAll_B(this)"/> <label for="checkbox_busan3">사하구</label>
+            		        <input type="hidden" name="hiddenValue_S" id="hiddenValue_S" value=""/>
+                        </div>
+                    </div>
+                    
+                </div>    
+                <button type="button" id="nav_drop_btn"><img src="img/menubar.png" alt="btn"></button>
+                <div id="nav_drop_menu" class="open">
+                    <ul>
+                        <li class="nav_drop_li"><a class="nav_drop_a" href="#"><img src="img/login-color3.png" alt="icon"> Login</a></li>
+                        <li class="nav_drop_li"><a class="nav_drop_a" href="#"><img src="img/signup-color3.png" alt="icon"> Sign Up</a></li>
+                        <li class="nav_drop_li"><a class="nav_drop_a" href="#"><img src="img/service-color3.png" alt="icon"> Service</a></li>
+                    </ul>
+                </div>           
+            </nav>
+        </header>
+    </div>
+    <script>
+        var menu_btn = document.getElementById('nav_drop_btn');
+        var dropdown = document.getElementById('nav_drop_menu');
+        
+        var detail_btn = document.getElementById('nav_search_detail_btn');
+        var detail_menu = document.getElementById('nav_search_detail');
+        
+        detail_btn.addEventListener('click', function(){
+            detail_menu.classList.toggle('open');
+        });
+        
+        menu_btn.addEventListener('click', function(){
+            dropdown.classList.toggle('open');
+        });
+        
+        function local_Seoul (){
+            var seoul = document.getElementById('btn_Seoul');
+            var busan = document.getElementById('btn_Busan');
+            
+            seoul.style.display = 'block';
+            busan.style.display = 'none';
+
+            const busan_Disabled = document.getElementsByName("checkbox_busan"); //부산 지역들
+            const busan_Allbtn_Disabled = document.getElementsByName("checkbox_busan_all"); //전체버튼 
+            if($(busan_Disabled).prop("checked") ==true) //부산지역들이 체크되어있으면
+           	{
+            	//부산지역들의 체크를 해제
+            	busan_Disabled.forEach((checkbox) => 
+            	{
+            	    checkbox.checked = false;
+                })
+           	}
+            if($(busan_Allbtn_Disabled).prop("checked") == true) //전체버튼이 체크되어있으면
+            {
+            	//전체버튼의 체크 해제
+            	busan_Allbtn_Disabled.forEach((checkbox) => 
+            	{
+            	    checkbox.checked = false;
+                })
+            }
+        }
+        function local_Busan()
+        {
+            var seoul = document.getElementById('btn_Seoul'); //btn_Seoul이라는 id를 찾아서 변수 seoul에 저장
+            var busan = document.getElementById('btn_Busan'); //btn_Busan이라는 id를 찾아서 변수 busan에 저장
+            seoul.style.display = 'none'; //부산 버튼 클릭시에 부산의 체크박스 표시
+            busan.style.display = 'block'; //부산 버튼 클릭시 서울의 체크박스 없애기
+            
+            /*부산 버튼 클릭시 다른 지역의 체크박스는 전부 해제 - (서울지역 해제)*/
+            const seoul_Disabled = document.getElementsByName("checkbox_seoul"); //서울 지역들
+            const seoul_Allbtn_Disabled = document.getElementsByName("checkbox_seoul_all"); //전체버튼 
+            if($(seoul_Disabled).prop("checked") ==true) //서울지역들이 체크되어있으면
+           	{
+            	//서울지역들의 체크를 해제
+            	seoul_Disabled.forEach((checkbox) => 
+            	{
+            	    checkbox.checked = false;
+                })
+           	}
+            if($(seoul_Allbtn_Disabled).prop("checked") == true) //전체버튼이 체크되어있으면
+            {
+            	//전체버튼의 체크 해제
+            	seoul_Allbtn_Disabled.forEach((checkbox) => 
+            	{
+            	    checkbox.checked = false;
+                })
+            }
+        }
+        function selectAll_Seoul(selectAll)  {
+            const checkboxes = document.getElementsByName('checkbox_seoul'); //name이 checkbox_seoul인 객체 checkboxes에 저장
+        	
+            //checkboxes가 없을때까지 반복(name이 checkbox_seoul인 객체들을 반복문으로 돌리는것)
+        	checkboxes.forEach((checkbox) => 
+        	{
+        		//name이 checkbox_seoul인 객체들의 checked 상태를 true로
+        	    checkbox.checked = selectAll.checked
+            })
+        }
+        /*서울 모든 체크박스가 선택되어있는 경우에 지역 하나를 체크해제하면 이름이 전체인 체크박스가 해제*/
+        function checkSelectAll_S(checkbox)  {
+            const selectall = document.querySelector('input[name="checkbox_seoul_all"]');
+        	
+        	if(checkbox.checked === false)  
+        	{
+        		//name이 checkbox_seoul_selectAll인 객체들의 checked 상태를 false로
+        	    selectall.checked = false;
+        	}
+        }
+		
+        /*부산 전체 버튼 클릭시 부산 지역 체크박스 전부 선택*/
+        //서울의 코드와 동일
+        function selectAll_Busan(selectAll)  {
+            const checkboxes = document.getElementsByName('checkbox_busan');
+        	  
+        	checkboxes.forEach((checkbox) => 
+        	{
+        	    checkbox.checked = selectAll.checked
+            })
+        }
+        
+        /*부산 모든 체크박스가 선택되어있는 경우에 지역 하나를 체크해제하면 이름이 전체인 체크박스가 해제*/
+        //서울의 코드와 동일
+        function checkSelectAll_B(checkbox)  {
+            const selectall = document.querySelector('input[name="checkbox_busan_all"]');
+        	  
+        	if(checkbox.checked === false)  
+        	{
+        	    selectall.checked = false;
+        	}
+        }
+    </script>
+</body>
+</html>
