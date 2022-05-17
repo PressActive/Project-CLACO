@@ -145,5 +145,10 @@ insert into review(created_date, modified_date, contents, score, status, cindex,
 insert into review(created_date, modified_date, contents, score, status, cindex, mindex) values (NOW(), NOW(), "리뷰 테스트 3", 3.7, "approval", 2, 2);
 insert into review(created_date, modified_date, contents, score, status, cindex, mindex) values (NOW(), NOW(), "리뷰 테스트 4", 2.2, "approval", 3, 3);
 insert into review(created_date, modified_date, contents, score, status, cindex, mindex) values (NOW(), NOW(), "리뷰 테스트 5", 3.4, "approval", 4, 4);
+insert into review(created_date, modified_date, contents, score, status, cindex, mindex) values (NOW(), NOW(), "리뷰 테스트 6", 3.4, "limited", 5, 5);
+insert into review(created_date, modified_date, contents, score, status, cindex, mindex) values (NOW(), NOW(), "리뷰 테스트 7", 3.4, "limited", 6, 6);
+
 
 commit;
+
+select * from academy;
