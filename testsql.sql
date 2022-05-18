@@ -115,30 +115,62 @@ insert into alertboard (created_date, modified_date, contents, title, mindex) va
 insert into alertboard (created_date, modified_date, contents, title, mindex) values (NOW(), NOW(), "공지사항테스트", "공지사항 9번입니다.", 21);
 insert into alertboard (created_date, modified_date, contents, title, mindex) values (NOW(), NOW(), "공지사항테스트", "공지사항 10번입니다.", 21);
 
-insert into class (category, startperiod, endperiod, name, price, score, status, info, iindex, aindex) values ("프로그래밍", NOW(), NOW(), "Java Web Programming", 1234000, 3.5, "approval", "강의1의 소개입니다.", 1, 1);
-insert into class (category, startperiod, endperiod, name, price, score, status, info, iindex, aindex) values ("요리", NOW(), NOW(), "초보도 하는 요리", 555000, 4.8, "approval", "강의2의 소개입니다.", 1, 2);
-insert into class (category, startperiod, endperiod, name, price, score, status, info, iindex, aindex) values ("음악", NOW(), NOW(), "노래 잘 부르는 방법", 1000000, 4.3, "approval", "강의3의 소개입니다.", 1, 3);
-insert into class (category, startperiod, endperiod, name, price, score, status, info, iindex, aindex) values ("요리", NOW(), NOW(), "영국 요리 따라만들기", 998000, 2.8, "approval", "강의4의 소개입니다.", 1, 4);
-insert into class (category, startperiod, endperiod, name, price, score, status, info, iindex, aindex) values ("음악", NOW(), NOW(), "입으로 기타소리 내는 방법", 585000, 3.7, "approval", "강의5의 소개입니다.", 1, 5);
-insert into class (category, startperiod, endperiod, name, price, score, status, info, iindex, aindex) values ("프로그래밍", NOW(), NOW(), "C++ Programming", 777000, 3.1, "approval", "강의6의 소개입니다.", 1, 6);
-insert into class (category, startperiod, endperiod, name, price, score, status, info, iindex, aindex) values ("프로그래밍", NOW(), NOW(), "옆 학원보다 잘 가르치는 Phyton", 2320000, 1.9, "approval", "강의7의 소개입니다.", 1, 7);
-insert into class (category, startperiod, endperiod, name, price, score, status, info, iindex, aindex) values ("프로그래밍", NOW(), NOW(), "안드로이드 앱 개발자가 되자", 900000, 3.7, "approval", "강의8의 소개입니다.", 1, 8);
-insert into class (category, startperiod, endperiod, name, price, score, status, info, iindex, aindex) values ("음악", NOW(), NOW(), "집에서 쉽게 따라하는 피아노 연주", 1234000, 4.2, "approval", "강의9의 소개입니다.", 1, 9);
-insert into class (category, startperiod, endperiod, name, price, score, status, info, iindex, aindex) values ("요리", NOW(), NOW(), "동양의 요리 연구", 350000, 4.9, "approval", "강의10의 소개입니다.", 1, 10);
+insert into class (category, startperiod, endperiod, name, price, score, status, info, aindex) values ("프로그래밍", NOW(), NOW(), "Java Web Programming", 1234000, 3.5, "approval", "강의1의 소개입니다.", 1);
+insert into class (category, startperiod, endperiod, name, price, score, status, info, aindex) values ("요리", NOW(), NOW(), "초보도 하는 요리", 555000, 4.8, "approval", "강의2의 소개입니다.", 2);
+insert into class (category, startperiod, endperiod, name, price, score, status, info, aindex) values ("음악", NOW(), NOW(), "노래 잘 부르는 방법", 1000000, 4.3, "approval", "강의3의 소개입니다.", 3);
+insert into class (category, startperiod, endperiod, name, price, score, status, info, aindex) values ("요리", NOW(), NOW(), "영국 요리 따라만들기", 998000, 2.8, "approval", "강의4의 소개입니다.", 4);
+insert into class (category, startperiod, endperiod, name, price, score, status, info, aindex) values ("음악", NOW(), NOW(), "입으로 기타소리 내는 방법", 585000, 3.7, "approval", "강의5의 소개입니다.", 5);
+insert into class (category, startperiod, endperiod, name, price, score, status, info, aindex) values ("프로그래밍", NOW(), NOW(), "C++ Programming", 777000, 3.1, "approval", "강의6의 소개입니다.", 6);
+insert into class (category, startperiod, endperiod, name, price, score, status, info, aindex) values ("프로그래밍", NOW(), NOW(), "옆 학원보다 잘 가르치는 Phyton", 2320000, 1.9, "approval", "강의7의 소개입니다.", 7);
+insert into class (category, startperiod, endperiod, name, price, score, status, info, aindex) values ("프로그래밍", NOW(), NOW(), "안드로이드 앱 개발자가 되자", 900000, 3.7, "approval", "강의8의 소개입니다.", 8);
+insert into class (category, startperiod, endperiod, name, price, score, status, info, aindex) values ("음악", NOW(), NOW(), "집에서 쉽게 따라하는 피아노 연주", 1234000, 4.2, "approval", "강의9의 소개입니다.", 9);
+insert into class (category, startperiod, endperiod, name, price, score, status, info, aindex) values ("요리", NOW(), NOW(), "동양의 요리 연구", 350000, 4.9, "approval", "강의10의 소개입니다.", 10);
 
-insert into comments (created_date, modified_date, comment, bindex, mindex) values (NOW(), NOW(), "테스트용 댓글", "70", "1");
-insert into comments (created_date, modified_date, comment, bindex, mindex) values (NOW(), NOW(), "테스트용 댓글", "70", "1");
-insert into comments (created_date, modified_date, comment, bindex, mindex) values (NOW(), NOW(), "테스트용 댓글", "70", "2");
-insert into comments (created_date, modified_date, comment, bindex, mindex) values (NOW(), NOW(), "테스트용 댓글", "70", "4");
-insert into comments (created_date, modified_date, comment, bindex, mindex) values (NOW(), NOW(), "테스트용 댓글", "70", "9");
-insert into comments (created_date, modified_date, comment, bindex, mindex) values (NOW(), NOW(), "테스트용 댓글", "70", "5");
-insert into comments (created_date, modified_date, comment, bindex, mindex) values (NOW(), NOW(), "테스트용 댓글", "70", "8");
-insert into comments (created_date, modified_date, comment, bindex, mindex) values (NOW(), NOW(), "테스트용 댓글", "70", "6");
-insert into comments (created_date, modified_date, comment, bindex, mindex) values (NOW(), NOW(), "테스트용 댓글", "70", "3");
-insert into comments (created_date, modified_date, comment, bindex, mindex) values (NOW(), NOW(), "테스트용 댓글", "70", "12");
+insert into comments (created_date, modified_date, comment, fbindex, mindex) values (NOW(), NOW(), "테스트용 댓글", "70", "1");
+insert into comments (created_date, modified_date, comment, fbindex, mindex) values (NOW(), NOW(), "테스트용 댓글", "70", "1");
+insert into comments (created_date, modified_date, comment, fbindex, mindex) values (NOW(), NOW(), "테스트용 댓글", "70", "2");
+insert into comments (created_date, modified_date, comment, fbindex, mindex) values (NOW(), NOW(), "테스트용 댓글", "70", "4");
+insert into comments (created_date, modified_date, comment, fbindex, mindex) values (NOW(), NOW(), "테스트용 댓글", "70", "9");
+insert into comments (created_date, modified_date, comment, fbindex, mindex) values (NOW(), NOW(), "테스트용 댓글", "70", "5");
+insert into comments (created_date, modified_date, comment, fbindex, mindex) values (NOW(), NOW(), "테스트용 댓글", "70", "8");
+insert into comments (created_date, modified_date, comment, fbindex, mindex) values (NOW(), NOW(), "테스트용 댓글", "70", "6");
+insert into comments (created_date, modified_date, comment, fbindex, mindex) values (NOW(), NOW(), "테스트용 댓글", "70", "3");
+insert into comments (created_date, modified_date, comment, fbindex, mindex) values (NOW(), NOW(), "테스트용 댓글", "70", "12");
 
-insert into imagefile (name, path) values ("사진1", "classpath:/static/img");
-insert into imagefile (name, path) values ("사진2", "classpath:/static/img");
+insert into academyimage (name, path, aindex) values ("사진1", "classpath:/static/img/", 1);
+insert into academyimage (name, path, aindex) values ("사진2", "classpath:/static/img/", 2);
+insert into academyimage (name, path, aindex) values ("사진1", "classpath:/static/img/", 3);
+insert into academyimage (name, path, aindex) values ("사진2", "classpath:/static/img/", 4);
+insert into academyimage (name, path, aindex) values ("사진1", "classpath:/static/img/", 5);
+insert into academyimage (name, path, aindex) values ("사진2", "classpath:/static/img/", 6);
+insert into academyimage (name, path, aindex) values ("사진1", "classpath:/static/img/", 7);
+insert into academyimage (name, path, aindex) values ("사진2", "classpath:/static/img/", 8);
+insert into academyimage (name, path, aindex) values ("사진1", "classpath:/static/img/", 9);
+insert into academyimage (name, path, aindex) values ("사진2", "classpath:/static/img/", 10);
+
+insert into classimage (name, path, cindex) values ("사진1", "classpath:/static/img/", 1);
+insert into classimage (name, path, cindex) values ("사진2", "classpath:/static/img/", 2);
+insert into classimage (name, path, cindex) values ("사진1", "classpath:/static/img/", 3);
+insert into classimage (name, path, cindex) values ("사진2", "classpath:/static/img/", 4);
+insert into classimage (name, path, cindex) values ("사진1", "classpath:/static/img/", 5);
+insert into classimage (name, path, cindex) values ("사진2", "classpath:/static/img/", 6);
+insert into classimage (name, path, cindex) values ("사진1", "classpath:/static/img/", 7);
+insert into classimage (name, path, cindex) values ("사진2", "classpath:/static/img/", 8);
+insert into classimage (name, path, cindex) values ("사진1", "classpath:/static/img/", 9);
+insert into classimage (name, path, cindex) values ("사진2", "classpath:/static/img/", 10);
+
+/*
+insert into freeboardimage (name, path, fbindex) values ("사진1", "classpath:/static/img/", 1);
+insert into freeboardimage (name, path, fbindex) values ("사진2", "classpath:/static/img/", 2);
+insert into freeboardimage (name, path, fbindex) values ("사진1", "classpath:/static/img/", 3);
+insert into freeboardimage (name, path, fbindex) values ("사진2", "classpath:/static/img/", 4);
+insert into freeboardimage (name, path, fbindex) values ("사진1", "classpath:/static/img/", 5);
+insert into freeboardimage (name, path, fbindex) values ("사진2", "classpath:/static/img/", 6);
+insert into freeboardimage (name, path, fbindex) values ("사진1", "classpath:/static/img/", 7);
+insert into freeboardimage (name, path, fbindex) values ("사진2", "classpath:/static/img/", 8);
+insert into freeboardimage (name, path, fbindex) values ("사진1", "classpath:/static/img/", 9);
+insert into freeboardimage (name, path, fbindex) values ("사진2", "classpath:/static/img/", 10);
+*/
 
 insert into review(created_date, modified_date, contents, score, status, cindex, mindex) values (NOW(), NOW(), "리뷰 테스트 1", 4.1, "approval", 1, 1);
 insert into review(created_date, modified_date, contents, score, status, cindex, mindex) values (NOW(), NOW(), "리뷰 테스트 2", 2.8, "approval", 1, 1);
@@ -150,5 +182,3 @@ insert into review(created_date, modified_date, contents, score, status, cindex,
 
 
 commit;
-
-select * from academy;
