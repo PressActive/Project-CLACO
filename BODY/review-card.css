@@ -1,0 +1,62 @@
+.card__content{
+            margin-top: 20px;
+            width: 430px;
+            height: 160px;
+            /* border:1px solid; */
+            border-radius: 5px;
+            box-shadow: 1px 1px 5px rgba(0, 0, 50, 0.4);
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+        }
+        .card__content:after{
+            clear: both;
+            content: "";
+            display: block;
+        }
+        .card_header{           
+            margin: 0 auto;
+            width: 400px;
+            height: 60px;
+            border-bottom: 1px dotted lightgray;
+        }
+        .card_header_profile{
+            line-height: 35px;
+            width: 400px;
+            height: 35px;
+            border-bottom: 1px dotted lightgray;           
+        }
+        .card_header_profile_info_name{
+            display: inline-block;
+            float: left;
+            font-size: 20px;
+        }
+        .card_header_profile_info_date{
+            display: inline-block;
+            float: right;
+        }
+        .card_header_rating{
+            line-height: 25px;
+            width: 400px;
+            height: 25px;
+        }
+        .card_academy{
+            line-height: 25px;
+            width: 400px;
+            height: 25px;
+            margin: 0 auto;
+            border-bottom: 1px dotted lightgray;           
+        }
+        .card_academy_info_name{
+            width: 400px;
+            height: 25px;
+            line-height: 25px;
+        }
+        .card_content{
+            width: 400px;
+            height: 50px;
+            margin: 0 auto;
+            padding-top: 5px;
+        }
