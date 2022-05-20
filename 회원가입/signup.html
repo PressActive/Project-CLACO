@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div id="wrap">
+        <div id="content">
+            <div class="back_g">
+                <div class="signup_form">
+                    <div class="input_signup">
+                        <div class="signup_head">
+                            <h1>SIGN UP</h1>
+                        </div>
+                        <div class="signup_container">
+                            <form action="/user/signup" method="post" name="userSign">
+                                <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />	<!-- 보안을 위한 spring security의 토큰기능 이용 -->
+                                <!-- <input type="hidden" name = "role" value="ROLE_MEMBER"> 일반회원 권한부여 -->
+                                
+                                <p class="signup_text">USER ID</p>
+                                <button type="button" id="id_check" onclick="idCheck()">중복체크</button>
+                                <input id = "signup_id" type = "text" name = "id" maxlength = "20" placeholder=" 아이디">
+                            
+                                <span id = "valid" th:text="${valid_id}"></span>
+                                
+                                <p class="signup_text">USER PASSWORD</p>
+                                <input id = "signup_pwd" type = "password" name = "pwd" maxlength = "20" placeholder=" 비밀번호" onchange="pwSame()"><br>
+                                <span id = "valid" th:text="${valid_pwd}"></span>
+                            
+                                <p class="signup_text">CHECK PASSWORD</p>
+                                <input id = "signup_pwd_check" type = "password" name = "checkPwd" maxlength = "20" placeholder=" 비밀번호 재입력" onchange="pwSame()"><br> 
+                                &nbsp;&nbsp;<span id="pwSame"></span>
+                                
+                                
+                                <p class="signup_text">USER NAME</p>                                           
+                                <input id = "signup_name" type = "text" name = "name" maxlength = "20" placeholder=" 이름"><br> 
+                                <span id = "valid" th:text="${valid_name}"></span>
+                                
+                                <p class="signup_text">PHONE NUMBER</p>                                           
+                                <input id = "signup_phone" type = "text" name = "phone" maxlength = "20" placeholder=" 전화번호"><br>
+                                <span id = "valid" th:text="${valid_phone}"></span>
+                                
+                                <p class="signup_text">E-MAIL</p>                            
+                                <input id = "signup_email" type = "text" name = "email" maxlength = "20" placeholder="이메일"><br> 
+                                <span id = "valid" th:text="${valid_email}"></span>
+                            
+                                
+                                <input id = "signup_submit_btn" type = "submit" name = "login" value = "가입하기">
+                            </form>
+                        </div>
+
+                        <div class="signup_footer">
+                            <h2>MADE BY CLACO.COMPANY</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="signup.js"></script>
+
+</body>
+</html>

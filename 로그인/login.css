@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'neo';
+    src: url('neodgm_pro.ttf') format('truetype'); 
+}
+*{
+    margin: 0;
+    padding: 0; 
+    font-family: 'neo';
+}
+#content{
+    width: 100%;
+    height: 975px;
+    position: relative;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+#content::-webkit-scrollbar{
+    display: none;
+}
+.back_g{
+    width: 100%;
+    height: 975px;
+    background-image: url('img/loginback3.png'); 
+}
+.login_form{
+    margin:  0 auto;
+    position: absolute;
+    right: 200px; 
+    top: 15%;
+    width: 600px;
+    height: 650px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 40, 0.4);
+    text-align: center;
+}
+.login_head{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 600px;
+    height: 130px;
+    font-size: 50px;
+    line-height: 130px;
+    box-sizing: border-box;
+    border-bottom: 5px dotted gray;
+}
+.login_text{
+    display: inline-block;
+    font-size: 40px;
+
+}
+#login_id{
+    width: 300px;
+    height: 50px;
+    border: 3px solid;
+    margin: 10px;
+    font-size: 30px;
+}
+
+#login_pwd{
+    width: 300px;
+    height: 50px;
+    border: 3px solid;
+    margin: 10px;
+    font-size: 30px;
+}
+#iogin_sumbit_btn{
+    margin: 20px;
+    width: 250px;
+    height: 50px;
+    font-size: 30px;
+    border: 3px solid;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+#iogin_sumbit_btn:hover{
+    background-color: white;
+    color: black;
+}
+.login_sign_up{
+    margin-top: 10px;
+    font-size: 20px;
+}
+.login_sign_up > p{
+    display: inline-block;
+    margin-right: 10px;
+}
+.login_sign_up > a{
+    cursor: pointer;
+    color: blue;
+    font-size: 25px;
+}
+.login_footer{
+    width: 600px;
+    height: 130px;
+    line-height: 130px;
+    margin-top: 50px;
+    /* padding-top: 50px; */
+    border-top: 5px dotted gray;
+    letter-spacing: 3px;
+}

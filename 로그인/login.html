@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div id="wrap">
+        <div id="content">
+            <div class="back_g">
+                <div class="login_form">
+                    <div class="input_login">
+                        <div class="login_head">
+                            <h1>L O G I N</h1>
+                        </div>
+                        
+                        <form action="/user/login" method="post">
+                            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+                            <p class="login_text">USER = </p>
+                            <input id = "login_id" type = "text" name = "id" placeholder = "*아이디 입력" maxlength = "20"><br> 
+                            <p class="login_text">PASS = </p>
+                            <input id = "login_pwd" type = "password" name = "pwd" placeholder = "*비밀번호 입력" maxlength = "20"><br> 
+                            <input id = "iogin_sumbit_btn" type = "submit" name = "login" value = "로그인">
+                        </form>
+                        <div class="login_sign_up">
+                            <p>회원이 아니신가요?</p>
+                            <a th:href="@{'/user/signup'}">>>회원가입<<</a>
+                        </div>
+
+                        <div class="login_footer">
+                            <h2>MADE BY CLACO.COMPANY</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

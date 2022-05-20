@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'neo';
+    src: url('neodgm_pro.ttf') format('truetype'); 
+}
+*{
+    margin: 0;
+    padding: 0; 
+    font-family: 'neo';
+}
+#content{
+    width: 100%;
+    height: 975px;
+    position: relative;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+#content::-webkit-scrollbar{
+    display: none;
+}
+.back_g{
+    width: 100%;
+    height: 975px;
+    background-image: url('img/loginback3.png'); 
+}
+.signup_form{
+    margin:  0 auto;
+    position: absolute;
+    right: 200px; 
+    top: 10%;
+    width: 600px;
+    height: 750px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 40, 0.4);
+    text-align: center;
+}
+.signup_head{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 600px;
+    height: 130px;
+    font-size: 50px;
+    line-height: 130px;
+    box-sizing: border-box;
+    border-bottom: 5px dotted gray;
+    letter-spacing: 10px;
+}
+.signup_container{
+    position: relative;
+    width: 600px;
+    height: 450px;
+}
+.signup_text{
+    float: left;
+    
+    text-align: left;
+    margin-left: 60px;
+    letter-spacing: 1px;
+    font-size: 30px;
+    margin-top: 25px;
+}
+input[type="text"], input[type="password"]{
+    float: right;
+    margin-right: 90px;
+    width: 200px;
+    height: 30px;
+    border: 3px solid;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+#id_check{
+    box-sizing: border-box;
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    height: 40px;
+    width: 80px;
+    border: 3px solid;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+#id_check:hover{
+    background-color: white;
+    color: black;
+}
+#pwSame{
+    position: absolute;
+    top: 167px;
+    left: 58px;
+    /* border: 1px solid; */
+    width: 300px;
+    height: 20px;
+    line-height: 20px;
+    /* color: blue; */
+    text-align: left;
+    
+}
+#signup_submit_btn{
+    box-sizing: border-box;
+    position: absolute;
+    left: 150px;
+    bottom:25px;
+    width: 300px;
+    height: 60px;
+    border: 3px solid;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+
+}
+#signup_submit_btn:hover{
+    background-color: white;
+    color: black;
+}
+.signup_footer{
+    width: 600px;
+    height: 100px;
+    line-height: 100px;
+    /* margin-top: 50px; */
+    /* padding-top: 50px; */
+    border-top: 5px dotted gray;
+    letter-spacing: 3px;
+}
