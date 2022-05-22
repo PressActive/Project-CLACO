@@ -22,18 +22,18 @@ insert into member (email, id, name, phone, pwd, role) values ("test20@test.com"
 insert into member (email, id, name, phone, pwd, role) values ("admin@claco.com", "admin", "관리자", "010-1234-5678", "$2a$10$q6aahSYucIp1Fnbf5zzoYuzYdN5r4pkigvWpz7nJcnBPCzVeAqddW", "ROLE_ADMIN");
 commit;
 
-insert into academy (address, companynum, grade, location, name, info, mindex) values ("서울시 강남구", "111-22-33333", 999, "강남구", "테스트학원1", "테스트학원1 소개입니다.", 11);
-insert into academy (address, companynum, grade, location, name, info, mindex) values ("부산시 사상구", "111-22-33333", 1000, "사상구", "테스트학원2", "테스트학원2 소개입니다.", 12);
-insert into academy (address, companynum, grade, location, name, info, mindex) values ("서울시 강서구", "111-22-33333", 1999, "강서구", "테스트학원3", "테스트학원3 소개입니다.", 13);
-insert into academy (address, companynum, grade, location, name, info, mindex) values ("부산시 사하구", "111-22-33333", 2000, "사하구", "테스트학원4", "테스트학원4 소개입니다.", 14);
-insert into academy (address, companynum, grade, location, name, info, mindex) values ("서울시 강남구", "111-22-33333", 2999, "강남구", "테스트학원5", "테스트학원5 소개입니다.", 15);
-insert into academy (address, companynum, grade, location, name, info, mindex) values ("부산시 사상구", "111-22-33333", 3000, "사상구", "테스트학원6", "테스트학원6 소개입니다.", 16);
-insert into academy (address, companynum, grade, location, name, info, mindex) values ("서울시 강서구", "111-22-33333", 3999, "강서구", "테스트학원7", "테스트학원7 소개입니다.", 17);
-insert into academy (address, companynum, grade, location, name, info, mindex) values ("부산시 사하구", "111-22-33333", 4000, "사하구", "테스트학원8", "테스트학원8 소개입니다.", 18);
-insert into academy (address, companynum, grade, location, name, info, mindex) values ("서울시 강남구", "111-22-33333", 0, "강남구", "테스트학원9", "테스트학원9 소개입니다.", 19);
-insert into academy (address, companynum, grade, location, name, info, mindex) values ("부산시 사상구", "111-22-33333", 1200, "사상구", "테스트학원10", "테스트학원10 소개입니다.", 20);
+insert into academy (address, companynum, grade, location, name, phone, email, homepage, info, mindex) values ("서울시 강남구", "111-22-33333", 999, "청담1동", "테스트학원1", "02-233-5678", "test11@academy.com", "https://testacademy1.com", "테스트학원1 소개입니다.", 11);
+insert into academy (address, companynum, grade, location, name, phone, email, homepage, info, mindex) values ("부산시 사상구", "111-22-33333", 1000, "괘법1동", "테스트학원2", "051-313-9876", "test12@academy.com", "https://testacademy2.com", "테스트학원2 소개입니다.", 12);
+insert into academy (address, companynum, grade, location, name, phone, email, homepage, info, mindex) values ("서울시 강서구", "111-22-33333", 1999, "명지1동", "테스트학원3", "02-233-5678", "test13@academy.com", "https://testacademy3.com", "테스트학원3 소개입니다.", 13);
+insert into academy (address, companynum, grade, location, name, phone, email, homepage, info, mindex) values ("부산시 사하구", "111-22-33333", 2000, "다대1동", "테스트학원4", "051-326-9164", "test14@academy.com", "https://testacademy4.com", "테스트학원4 소개입니다.", 14);
+insert into academy (address, companynum, grade, location, name, phone, email, homepage, info, mindex) values ("서울시 강남구", "111-22-33333", 2999, "삼성2동", "테스트학원5", "02-711-3128", "test15@academy.com", "https://testacademy5.com", "테스트학원5 소개입니다.", 15);
+insert into academy (address, companynum, grade, location, name, phone, email, homepage, info, mindex) values ("부산시 사상구", "111-22-33333", 3000, "모라2동", "테스트학원6", "051-322-1134", "test16@academy.com", "https://testacademy6.com", "테스트학원6 소개입니다.", 16);
+insert into academy (address, companynum, grade, location, name, phone, email, homepage, info, mindex) values ("서울시 강서구", "111-22-33333", 3999, "녹산동", "테스트학원7", "02-521-5227", "test17@academy.com", "https://testacademy7.com", "테스트학원7 소개입니다.", 17);
+insert into academy (address, companynum, grade, location, name, phone, email, homepage, info, mindex) values ("부산시 사하구", "111-22-33333", 4000, "하단1동", "테스트학원8", "051-775-5312", "test18@academy.com", "https://testacademy8.com", "테스트학원8 소개입니다.", 18);
+insert into academy (address, companynum, grade, location, name, phone, email, homepage, info, mindex) values ("서울시 강남구", "111-22-33333", 0, "대치2동", "테스트학원9", "02-445-8876", "test19@academy.com", "https://testacademy9.com", "테스트학원9 소개입니다.", 19);
+insert into academy (address, companynum, grade, location, name, phone, email, homepage, info, mindex) values ("부산시 사상구", "111-22-33333", 1200, "감전1동", "테스트학원10", "051-621-7221", "test20@academy.com", "https://testacademy10.com", "테스트학원10 소개입니다.", 20);
 
-insert into academyfiles (created_date, modified_date, is_deleted, original_filename, path, size, aindex) values (NOW(), NOW(), 0, "사진1.jpg", "src\\mai\\\\resources\\static\\img\\temp\\사진1.jpg", 99391, 1);
+insert into academyfiles (created_date, modified_date, is_deleted, original_filename, path, size, aindex) values (NOW(), NOW(), 0, "사진1.jpg", "src\\main\\resources\\static\\img\\temp\\사진1.jpg", 99391, 1);
 insert into academyfiles (created_date, modified_date, is_deleted, original_filename, path, size, aindex) values (NOW(), NOW(), 0, "사진2.jpg", "src\\main\\resources\\static\\img\\temp\\사진2.jpg", 35812, 2);
 insert into academyfiles (created_date, modified_date, is_deleted, original_filename, path, size, aindex) values (NOW(), NOW(), 0, "사진1.jpg", "src\\main\\resources\\static\\img\\temp\\사진1.jpg", 99391, 3);
 insert into academyfiles (created_date, modified_date, is_deleted, original_filename, path, size, aindex) values (NOW(), NOW(), 0, "사진2.jpg", "src\\main\\resources\\static\\img\\temp\\사진2.jpg", 35812, 4);
